@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>All Around Properties | Contracting</title>
-  <meta name="description" content="All Around Properties provides reliable residential & commercial contracting. Free estimates. Quality craftsmanship." />
+  <title>All Around Property Preservation | Property Preservation & Maintenance</title>
+  <meta name="description" content="All Around Property Preservation provides fast, reliable property preservation, maintenance, and repairs. Property-ready results." />
   <style>
     :root{
       --bg: #0b1220;
@@ -105,7 +105,7 @@
       margin: 0 0 18px;
       color: var(--muted);
       font-size: 16px;
-      max-width: 52ch;
+      max-width: 58ch;
     }
     .cta{
       display:flex; gap:12px; flex-wrap:wrap; align-items:center;
@@ -129,6 +129,7 @@
       color: #061014;
     }
     .btn.primary:hover{ transform: translateY(-1px); filter: brightness(1.02); }
+
     .hero-card{
       border: 1px solid var(--line);
       background: rgba(0,0,0,.18);
@@ -179,6 +180,29 @@
     }
     @media (max-width: 900px){ .split{ grid-template-columns: 1fr; } }
 
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 1000px){ .gallery{ grid-template-columns: repeat(2, 1fr); } }
+    .gallery a{
+      display:block;
+      border-radius: 16px;
+      overflow:hidden;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      transition: transform .12s ease, border-color .12s ease;
+    }
+    .gallery a:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.2); }
+    .gallery img{
+      width:100%;
+      height: 160px;
+      object-fit: cover;
+      display:block;
+    }
+
     .footer{
       margin-top: 38px;
       padding-top: 18px;
@@ -196,8 +220,8 @@
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
         <div>
-          <div style="font-size:15px;">All Around Properties</div>
-          <div style="font-size:12px; color:var(--muted); margin-top:2px;">Residential & Commercial Contracting</div>
+          <div style="font-size:15px;">All Around Property Preservation</div>
+          <div style="font-size:12px; color:var(--muted); margin-top:2px;">Property Preservation & Maintenance</div>
         </div>
       </div>
 
@@ -212,28 +236,32 @@
     <section class="hero" id="top">
       <div class="hero-inner">
         <div>
-          <div class="badge"><span class="dot"></span> Free estimates • Fast response</div>
-          <h1>Quality contracting.<br/>Done right the first time.</h1>
+          <div class="badge"><span class="dot"></span> Fast response • Property-ready results</div>
+
+          <h1>Reliable property preservation.<br/>Done right the first time.</h1>
+
           <p class="lead">
-            All Around Properties delivers dependable renovations, repairs, and project builds with clear communication and craftsmanship you can trust.
+            All Around Property Preservation helps protect and maintain residential and commercial properties with fast response, clear communication, and quality workmanship.
           </p>
 
           <div class="cta">
             <!-- Update these -->
             <a class="btn primary" href="tel:1234567890">Call (123) 456-7890</a>
-            <a class="btn" href="mailto:youremail@email.com?subject=Free%20Estimate%20Request">Request a Quote</a>
+            <a class="btn" href="mailto:youremail@email.com?subject=Service%20Request%20-%20Property%20Preservation">Request Service</a>
             <a class="btn" href="#services">View Services</a>
           </div>
         </div>
 
         <aside class="hero-card">
+          <!-- Update this -->
           <h3>Serving <span style="color:var(--text);">Your City, ST</span></h3>
-          <p>Residential + commercial projects. Honest timelines. Clean job sites.</p>
+          <p>Property managers • Investors • Homeowners</p>
+
           <div class="quick">
             <div class="pill"><strong>Licensed</strong><br/> & insured</div>
-            <div class="pill"><strong>5-star</strong><br/> customer care</div>
-            <div class="pill"><strong>Clear</strong><br/> estimates</div>
-            <div class="pill"><strong>On-time</strong><br/> communication</div>
+            <div class="pill"><strong>Fast</strong><br/> turnaround</div>
+            <div class="pill"><strong>Clear</strong><br/> photo updates</div>
+            <div class="pill"><strong>Reliable</strong><br/> communication</div>
           </div>
         </aside>
       </div>
@@ -243,67 +271,71 @@
       <h2>Services</h2>
       <div class="grid">
         <div class="card">
-          <h3>Renovations & Remodels</h3>
-          <p>Kitchens, bathrooms, basements, and full property refreshes.</p>
-        </div>
-        <div class="card">
-          <h3>Exterior Projects</h3>
-          <p>Decks, patios, siding, roofing, fencing, and outdoor upgrades.</p>
+          <h3>Property Preservation</h3>
+          <p>Securing, cleaning, winterization, and ongoing upkeep to protect the asset.</p>
         </div>
         <div class="card">
           <h3>Repairs & Maintenance</h3>
-          <p>Punch lists, drywall, trim, flooring, and general contracting.</p>
+          <p>Interior and exterior repairs to keep properties safe, functional, and compliant.</p>
+        </div>
+        <div class="card">
+          <h3>Trash Outs & Curb Appeal</h3>
+          <p>Debris removal, lawn care, light landscaping, and exterior cleanups.</p>
         </div>
       </div>
     </section>
 
-    <section class="section split" id="work">
-      <div class="card">
-  <h2 style="margin-top:0;">Recent work</h2>
+    <section class="section" id="work">
+      <h2>Recent Work</h2>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+      <!-- Upload your images into the repo root and update filenames below -->
+      <div class="gallery">
+        <a href="kitchen.jpg" target="_blank" aria-label="Open photo 1">
+          <img src="kitchen.jpg" alt="Recent work photo 1">
+        </a>
+        <a href="deck.jpg" target="_blank" aria-label="Open photo 2">
+          <img src="deck.jpg" alt="Recent work photo 2">
+        </a>
+        <a href="bathroom.jpg" target="_blank" aria-label="Open photo 3">
+          <img src="bathroom.jpg" alt="Recent work photo 3">
+        </a>
+        <a href="remodel.jpg" target="_blank" aria-label="Open photo 4">
+          <img src="remodel.jpg" alt="Recent work photo 4">
+        </a>
+      </div>
 
-  <a href="kitchen.jpg" target="_blank">
-    <img src="kitchen.jpg" style="width:100%;border-radius:12px;">
-  </a>
-
-  <a href="deck.jpg" target="_blank">
-    <img src="deck.jpg" style="width:100%;border-radius:12px;">
-  </a>
-
-  <a href="bathroom.jpg" target="_blank">
-    <img src="bathroom.jpg" style="width:100%;border-radius:12px;">
-  </a>
-
-  <a href="remodel.jpg" target="_blank">
-    <img src="remodel.jpg" style="width:100%;border-radius:12px;">
-  </a>
-
-</div>
-
-      <div class="card" id="about">
-        <h2 style="margin-top:0;">About</h2>
-        <p style="margin:0; color:var(--muted);">
-          All Around Properties is a locally owned contracting company focused on reliable service, clear communication, and quality craftsmanship.
-          We treat your property like our own and stand behind our work.
-        </p>
+      <div style="margin-top:12px;color:var(--muted);font-size:14px;">
+        Tip: rename your images to match the filenames above (or change the filenames here).
       </div>
     </section>
 
-    <section class="section card" id="contact">
-      <h2 style="margin-top:0;">Contact</h2>
-      <p style="color:var(--muted); margin: 0 0 12px;">
-        Call, email, or request a free estimate. We typically respond within 1 business day.
-      </p>
-      <!-- Update these -->
-      <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn primary" href="tel:1234567890">Call (123) 456-7890</a>
-        <a class="btn" href="mailto:youremail@email.com?subject=Free%20Estimate%20Request">Email youremail@email.com</a>
+    <section class="section split">
+      <div class="card" id="about">
+        <h2 style="margin-top:0;">About</h2>
+        <p style="margin:0; color:var(--muted);">
+          All Around Property Preservation provides reliable preservation, maintenance, and repair services for homeowners, investors, and property managers.
+          We take pride in fast response times, quality workmanship, and keeping properties secure and well maintained.
+        </p>
+      </div>
+
+      <div class="card" id="contact">
+        <h2 style="margin-top:0;">Contact</h2>
+        <p style="color:var(--muted); margin: 0 0 12px;">
+          Call, email, or request service. We typically respond within 1 business day.
+        </p>
+        <!-- Update these -->
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="tel:1234567890">Call (123) 456-7890</a>
+          <a class="btn" href="mailto:youremail@email.com?subject=Service%20Request%20-%20Property%20Preservation">Email youremail@email.com</a>
+        </div>
+        <div style="margin-top:10px;color:var(--muted);font-size:13px;">
+          Service Area: Your City & surrounding areas
+        </div>
       </div>
     </section>
 
     <div class="footer">
-      <div>© <span id="y"></span> All Around Properties</div>
+      <div>© <span id="y"></span> All Around Property Preservation</div>
       <div>Built on GitHub Pages</div>
     </div>
   </div>
@@ -313,4 +345,3 @@
   </script>
 </body>
 </html>
-
